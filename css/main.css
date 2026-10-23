@@ -2,8 +2,34 @@
 
 /* Set custom variables here */
 
+:root {
+  --body-bg: #f6f3ed;
+  --bs-primary: #2e483a;
+  --bs-primary-rgb: 46, 72, 58;
+  --bs-light: #f6f3ed;
+}
 
+.btn-primary {
+  color: var(--bs-light);
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-light);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-border-color: var(--bs-primary);
+}
 
+.btn-primary:hover {
+  color: var(--bs-primary);
+}
+
+.btn-primary:active {
+  color: var(--bs-light);
+}
+
+.bg-primary {
+  background-color: var(--bs-primary);
+}
 
 
 .navbar-brand {
@@ -19,7 +45,7 @@ h1, h2, h3 {
 }
 
 #hero {
-  height: 800px;
+  height: 700px;
   background-color: #E4E6DB;
   background-image: url(../images/hero-bg-img.png);
   background-repeat: no-repeat;
@@ -43,7 +69,17 @@ h1, h2, h3 {
 }
 
 section:not(#hero):not(#cta){
-  padding: 60px 0;
+  padding: 80px 0;
+}
+
+@media(min-width: 992px){
+  .container-lg {
+    max-width: 1200px;
+  }
+  
+  section:not(#hero):not(#cta){
+    padding: 100px 0;
+  }
 }
 
 @media(min-width: 993px){
